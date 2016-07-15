@@ -33,7 +33,7 @@ namespace D3bugDesign
 			{
 				ContentProperty = DependencyProperty.Register("Content", typeof(object), typeof(StandardWindow), new UIPropertyMetadata(null, ContentChangedCallback));
 				BackgroundProperty = DependencyProperty.Register("Background", typeof(object), typeof(StandardWindow), new UIPropertyMetadata(Brushes.Transparent, BackgroundChangedCallback));
-				TitlebarBrushProperty = DependencyProperty.Register("TitlebarBrush", typeof(object), typeof(StandardWindow), new UIPropertyMetadata(Brushes.DarkBlue, TitlebarBrushChangedCallback));
+				TitleBarBackgroundProperty = DependencyProperty.Register("TitleBarBackground", typeof(object), typeof(StandardWindow), new UIPropertyMetadata(Brushes.DarkBlue, TitlebarBrushChangedCallback));
 			}
 		}
 
@@ -319,22 +319,22 @@ namespace D3bugDesign
 			window.contentWindowBackgroundBorder.Background = (Brush)args.NewValue;
 		}
 
-		public Brush TitlebarBrush
+		public Brush TitleBarBackground
 		{
-			get { return (Brush)GetValue(TitlebarBrushProperty); }
+			get { return (Brush)GetValue(TitleBarBackgroundProperty); }
 			set
 			{
-				SetValue(TitlebarBrushProperty, value);
+				SetValue(TitleBarBackgroundProperty, value);
 				captionControl.Background = value;
 			}
 		}
 
-		public static readonly DependencyProperty TitlebarBrushProperty;
+		public static readonly DependencyProperty TitleBarBackgroundProperty;
 
 		private static void TitlebarBrushChangedCallback(DependencyObject property, DependencyPropertyChangedEventArgs args)
 		{
 			var window = (StandardWindow)property;
-			window.TitlebarBrush = (Brush)args.NewValue;
+			window.TitleBarBackground = (Brush)args.NewValue;
 		}
 
 		public new virtual WindowState WindowState

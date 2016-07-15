@@ -1,1 +1,15 @@
 C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowDemo\bin\Release\CustomWindowDemo.exe.config
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowDemo\bin\Release\CustomWindowDemo.exe
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowDemo\bin\Release\CustomWindowDemo.pdb
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowDemo\bin\Release\D3bugDesign.BlendWindow.dll
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowDemo\bin\Release\D3bugDesign.BlendWindow.pdb
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowDemo\obj\Release\BlendWindowDemo.csprojResolveAssemblyReference.cache
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowDemo\obj\Release\Window1.baml
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowDemo\obj\Release\Window1.g.cs
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowDemo\obj\Release\App.g.cs
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowDemo\obj\Release\CustomWindowDemo_MarkupCompile.cache
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowDemo\obj\Release\CustomWindowDemo.g.resources
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowDemo\obj\Release\CustomWindowDemo.Properties.Resources.resources
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowDemo\obj\Release\BlendWindowDemo.csproj.GenerateResource.Cache
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowDemo\obj\Release\CustomWindowDemo.exe
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowDemo\obj\Release\CustomWindowDemo.pdb
