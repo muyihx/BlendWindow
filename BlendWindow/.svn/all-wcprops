@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/!svn/ver/31017/CustomWindow
+END
+EssentialWindow.cs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/27529/CustomWindow/EssentialWindow.cs
+END
+WinApi.cs
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/31017/CustomWindow/WinApi.cs
+END
+StandardWindow.cs
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/43998/CustomWindow/StandardWindow.cs
+END
+WindowCloseButton.cs
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/27529/CustomWindow/WindowCloseButton.cs
+END
+CustomWindow.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/31017/CustomWindow/CustomWindow.csproj
+END
+WindowButton.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/27529/CustomWindow/WindowButton.xaml
+END
+Graphics.cs
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/31017/CustomWindow/Graphics.cs
+END
+ButtonIcons.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/27529/CustomWindow/ButtonIcons.xaml
+END
+WindowButton.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/27529/CustomWindow/WindowButton.xaml.cs
+END
+Others.cs
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/31017/CustomWindow/Others.cs
+END
+ResizingAdorner.cs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/31017/CustomWindow/ResizingAdorner.cs
+END
+WindowMinimizeButton.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/27529/CustomWindow/WindowMinimizeButton.cs
+END
+WindowMaximizeButton.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/27529/CustomWindow/WindowMaximizeButton.cs
+END
+WindowRestoreButton.cs
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/27529/CustomWindow/WindowRestoreButton.cs
+END
+VistaGlassApi.cs
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/27529/CustomWindow/VistaGlassApi.cs
+END
+CustomWindow.csproj.user
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/43998/CustomWindow/CustomWindow.csproj.user
+END

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>BlendWindow</id>
+    <version>1.0.0</version>
+    <title>BlendWindow</title>
+    <authors>JNelson</authors>
+    <owners></owners>
+    <description>
+     A base window framework that exposes Aero and WindowChrome for maximum pleasure
+    </description>
+    <releaseNotes>
+    </releaseNotes>
+    <summary>
+      A base window framework that exposes Aero and WindowChrome for maximum pleasure
+    </summary>
+    <language>en-US</language>
+    <projectUrl>https://nuget.org/packages/BlendWindowNugetPackage</projectUrl>
+    <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
+    <copyright>Copyright  2016</copyright>
+    <dependencies/>
+    <references/>
+    <tags/>
+  </metadata>
+  <files>
+    <file src="lib\" target="lib" />
+    <file src="tools\" target="tools" />
+    <file src="content\" target="content" />
+  </files>
+</package>

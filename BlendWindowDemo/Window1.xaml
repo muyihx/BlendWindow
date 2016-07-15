@@ -1,0 +1,22 @@
+﻿<d3BugDesign:StandardWindow x:Class="CustomWindowDemo.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d3BugDesign="clr-namespace:D3bugDesign;assembly=D3bugDesign.BlendWindow"
+    Title="Window demo"
+    Height="300" Width="300" TitlebarBrush="Brown">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="40" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+		<TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Bottom" FontWeight="Bold">Standard Window</TextBlock>
+	</Grid>
+</d3BugDesign:StandardWindow>

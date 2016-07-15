@@ -1,0 +1,116 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<StreamGeometry x:Key="MinimizeGeometry">M0,0 L8,0 8,1 8,2 0,2 0,1 z</StreamGeometry>
+	<StreamGeometry x:Key="MaximizeGeometry">M 1,3 L 11,3 L 11,11 L 1,11 Z M 0,0 L 12,0 L12,12 L 0,12 ZM 1,3 L 11,3 L 11,11 L 1,11 Z M 0,0 L 12,0 L12,12 L 0,12 Z</StreamGeometry>
+	<StreamGeometry x:Key="RestoreGeometry">M 0,3L 3,3L 3,0L 10,0L 10,7L 7,7L 7,10L 0,10 Z M 8,2L 5,2L 5,3L 7,3L 7, 5L 8, 5 Z M 2,5L 2, 8L 5, 8L 5,5 ZM 0,3L 3,3L 3,0L 10,0L 10,7L 7,7L 7,10L 0,10 Z M 8,2L 5,2L 5,3L 7,3L 7, 5L 8, 5 Z M 2,5L 2, 8L 5, 8L 5,5 Z</StreamGeometry>
+	<StreamGeometry x:Key="RestoreGeometry1">M 0,3L 3,3L 3,0L 16,0L 16,13L 13,13L 13,16L 0,16 Z M 14,2L 5,2L 5,3L 13,3L 13,11L 14,11 Z M 2,5L 2,14L 11,14L 11,5 ZM 0,3L 3,3L 3,0L 16,0L 16,13L 13,13L 13,16L 0,16 Z M 14,2L 5,2L 5,3L 13,3L 13,11L 14,11 Z M 2,5L 2,14L 11,14L 11,5 Z</StreamGeometry>
+	<StreamGeometry x:Key="CloseGeometry">M 7.070,5.657 L 4.949,3.535 L 7.070,1.414 L 5.656,0.000 L 3.535,2.121 L 1.414,0.001 L 0.000,1.415 L 2.121,3.535 L 0.000,5.656 L 1.414,7.071 L 3.535,4.950 L 5.656,7.071 ZM 7.070,5.657 L 4.949,3.535 L 7.070,1.414 L 5.656,0.000 L 3.535,2.121 L 1.414,0.001 L 0.000,1.415 L 2.121,3.535 L 0.000,5.656 L 1.414,7.071 L 3.535,4.950 L 5.656,7.071 Z</StreamGeometry>
+	<Color x:Key="WindowBackgroundColor">#FF05121E</Color>
+	<Color x:Key="DarkBackgroundColor">#FF0B1E32</Color>
+	<Color x:Key="TransparentBackgrounColor">#00FFFFFF</Color>
+	<Color x:Key="LightBackgroundColor">#FF141414</Color>
+	<Color x:Key="BackgroundColor">#FF141414</Color>
+	<Color x:Key="DisabledBackgroundColor">#424242</Color>
+	<Color x:Key="LightDisabledBackgroundColor">#666666</Color>
+	<Color x:Key="ForegroundColor">#EFEFEF</Color>
+	<Color x:Key="HighlightColor">#BDBDBD</Color>
+	<Color x:Key="HotColor">#525252</Color>
+	<Color x:Key="NormalBorder">#FF141414</Color>
+	<Color x:Key="SpectrumColor">#FFB4D0FF</Color>
+	<Color x:Key="HighlightNowPlayingColor">#FFB4D0FF</Color>
+	<Color x:Key="QuickButtonColor">#FF6C6C6C</Color>
+	<SolidColorBrush x:Key="MainBorderBrush" Color="#FF154270"></SolidColorBrush>
+	<SolidColorBrush x:Key="WindowBackgroundBrush" Color="{StaticResource WindowBackgroundColor}" />
+	<SolidColorBrush x:Key="ForegroundBrush" Color="{StaticResource ForegroundColor}" />
+	<SolidColorBrush x:Key="ButtonBackground" Color="{StaticResource TransparentBackgrounColor}" />
+	<SolidColorBrush x:Key="ButtonBorder" Color="{StaticResource DisabledBackgroundColor}" />
+	<SolidColorBrush x:Key="ButtonForeground" Color="{StaticResource ForegroundColor}" />
+	<SolidColorBrush x:Key="MouseOverButtonBackground" Color="#AAAAAA" />
+	<SolidColorBrush x:Key="MouseOverButtonForeground" Color="#1B1B1B" />
+	<SolidColorBrush x:Key="PressedButtonBackground" Color="{StaticResource DisabledBackgroundColor}" />
+	<SolidColorBrush x:Key="DisabledButtonBackground" Color="{StaticResource LightDisabledBackgroundColor}" />
+	<SolidColorBrush x:Key="DisabledButtonForeground" Color="{StaticResource DisabledBackgroundColor}" />
+	<LinearGradientBrush x:Key="RedButtonBackground" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Offset="0" Color="#F89C8C" />
+		<GradientStop Offset="0.45" Color="#D47F75" />
+		<GradientStop Offset="0.45" Color="#C04C3C" />
+		<GradientStop Offset="1" Color="#C98172" />
+	</LinearGradientBrush>
+	<LinearGradientBrush x:Key="RedButtonMouseOverBackground" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Offset="0" Color="#F89C8C" />
+		<GradientStop Offset="0.45" Color="#E36A53" />
+		<GradientStop Offset="0.45" Color="#C72B0E" />
+		<GradientStop Offset="0.75" Color="#D44310" />
+		<GradientStop Offset="1" Color="#F5E478" />
+	</LinearGradientBrush>
+	
+	<ScaleTransform x:Key="Scale1" ScaleX="1" ScaleY="1" />
+	
+	<Style TargetType="Path" x:Key="TitleBarButtonPathStyle">
+		<Setter Property="StrokeThickness" Value="1" />
+		<Setter Property="Stroke" Value="{StaticResource MainBorderBrush}" />
+		<Setter Property="Fill" Value="{StaticResource WindowBackgroundBrush}" />
+		<Setter Property="RenderTransformOrigin" Value="0.5,0.5" />
+		<Setter Property="LayoutTransform" Value="{StaticResource Scale1}" />
+		<Setter Property="Stretch" Value="Fill" />
+	</Style>
+	<Style x:Key="ButtonFocusVisual">
+		<Setter Property="Control.Template">
+			<Setter.Value>
+				<ControlTemplate>
+					<Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{StaticResource ForegroundBrush}" StrokeThickness="1" StrokeDashArray="1 2" />
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	
+	<Style TargetType="{x:Type Button}">
+		<Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}" />
+		<Setter Property="Background" Value="{StaticResource ButtonBackground}" />
+		<Setter Property="BorderBrush" Value="{StaticResource ButtonBorder}" />
+		<Setter Property="BorderThickness" Value="1,0,1,0" />
+		<Setter Property="Foreground" Value="{StaticResource ButtonForeground}" />
+		<Setter Property="HorizontalContentAlignment" Value="Center" />
+		<Setter Property="VerticalContentAlignment" Value="Center" />
+		<Setter Property="Padding" Value="1" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="3">
+						<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="true">
+							<Setter Property="Background" Value="{StaticResource MouseOverButtonBackground}" />
+							<Setter Property="Foreground" Value="{StaticResource MouseOverButtonForeground}" />
+						</Trigger>
+						<Trigger Property="IsPressed" Value="true">
+							<Setter Property="Background" Value="{StaticResource PressedButtonBackground}" />
+							<Setter Property="Foreground" Value="{StaticResource ButtonForeground}" />
+						</Trigger>
+						<Trigger Property="IsEnabled" Value="false">
+							<Setter Property="Foreground" Value="{StaticResource DisabledButtonForeground}" />
+							<Setter Property="Background" Value="{StaticResource DisabledButtonBackground}" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<!-- MINIMIZE -->
+	<Path x:Key="WindowButtonMinimizeIcon" Width="13" Height="5" Style="{StaticResource TitleBarButtonPathStyle}"  Data="{StaticResource MinimizeGeometry}" />
+	<!-- MINIMIZE (disabled) -->
+	<Border x:Key="WindowButtonMinimizeIconDisabled" Width="13" Height="5" Margin="0,5,0,0" BorderBrush="#9FA5B2" BorderThickness="1" Background="#FFFFFF" />
+	<!-- RESTORE -->
+	<Path x:Key="WindowButtonRestoreIcon" Width="13" Height="13" Style="{StaticResource TitleBarButtonPathStyle}" Data="{StaticResource RestoreGeometry}" />
+	<!-- RESTORE (disabled) -->
+	<Path x:Key="WindowButtonRestoreIconDisabled" Width="13" Height="13" Style="{StaticResource TitleBarButtonPathStyle}" Data="{StaticResource RestoreGeometry}" />
+	<!-- MAXIMIZE -->
+	<Path x:Key="WindowButtonMaximizeIcon" Width="13" Height="13" Style="{StaticResource TitleBarButtonPathStyle}" Data="{StaticResource MaximizeGeometry}" />
+	<!-- MAXIMIZE (disabled) -->
+	<Path x:Key="WindowButtonMaximizeIconDisabled" Width="13" Height="13" Style="{StaticResource TitleBarButtonPathStyle}" Data="{StaticResource MaximizeGeometry}" />
+	<!-- CLOSE -->
+	<Path x:Key="WindowButtonCloseIcon" Width="13" Height="13" Style="{StaticResource TitleBarButtonPathStyle}" Data="{StaticResource CloseGeometry}" />
+	<!-- Background colors for red button (e.g close button) -->
+	
+</ResourceDictionary>

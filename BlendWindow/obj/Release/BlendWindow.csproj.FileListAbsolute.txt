@@ -1,0 +1,10 @@
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindow\bin\Release\D3bugDesign.BlendWindow.dll
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindow\bin\Release\D3bugDesign.BlendWindow.pdb
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindow\obj\Release\WindowButton.baml
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindow\obj\Release\WindowButton.g.cs
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindow\obj\Release\D3bugDesign.BlendWindow_MarkupCompile.cache
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindow\obj\Release\D3bugDesign.BlendWindow.g.resources
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindow\obj\Release\D3bugDesign.Properties.Resources.resources
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindow\obj\Release\BlendWindow.csproj.GenerateResource.Cache
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindow\obj\Release\D3bugDesign.BlendWindow.dll
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindow\obj\Release\D3bugDesign.BlendWindow.pdb

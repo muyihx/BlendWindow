@@ -1,0 +1,15 @@
+C:\Users\JNelson\Downloads\CustomWindow\WPFWindow\CustomWindowDemo\bin\Debug\CustomWindowDemo.exe
+C:\Users\JNelson\Downloads\CustomWindow\WPFWindow\CustomWindowDemo\bin\Debug\CustomWindowDemo.pdb
+C:\Users\JNelson\Downloads\CustomWindow\WPFWindow\CustomWindowDemo\obj\Debug\CustomWindowDemo.csprojResolveAssemblyReference.cache
+C:\Users\JNelson\Downloads\CustomWindow\WPFWindow\CustomWindowDemo\obj\Debug\Window1.baml
+C:\Users\JNelson\Downloads\CustomWindow\WPFWindow\CustomWindowDemo\obj\Debug\Window1.g.cs
+C:\Users\JNelson\Downloads\CustomWindow\WPFWindow\CustomWindowDemo\obj\Debug\App.g.cs
+C:\Users\JNelson\Downloads\CustomWindow\WPFWindow\CustomWindowDemo\obj\Debug\CustomWindowDemo_MarkupCompile.cache
+C:\Users\JNelson\Downloads\CustomWindow\WPFWindow\CustomWindowDemo\obj\Debug\CustomWindowDemo.g.resources
+C:\Users\JNelson\Downloads\CustomWindow\WPFWindow\CustomWindowDemo\obj\Debug\CustomWindowDemo.Properties.Resources.resources
+C:\Users\JNelson\Downloads\CustomWindow\WPFWindow\CustomWindowDemo\obj\Debug\CustomWindowDemo.csproj.GenerateResource.Cache
+C:\Users\JNelson\Downloads\CustomWindow\WPFWindow\CustomWindowDemo\obj\Debug\CustomWindowDemo.exe
+C:\Users\JNelson\Downloads\CustomWindow\WPFWindow\CustomWindowDemo\obj\Debug\CustomWindowDemo.pdb
+C:\Users\JNelson\Downloads\CustomWindow\WPFWindow\CustomWindowDemo\bin\Debug\CustomWindowDemo.exe.config
+C:\Users\JNelson\Downloads\CustomWindow\WPFWindow\CustomWindowDemo\bin\Debug\D3bugDesign.BlendWindow.dll
+C:\Users\JNelson\Downloads\CustomWindow\WPFWindow\CustomWindowDemo\bin\Debug\D3bugDesign.BlendWindow.pdb
