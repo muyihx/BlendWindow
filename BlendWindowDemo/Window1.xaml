@@ -10,12 +10,13 @@
 							TitleBarButtonForeground="{DynamicResource TitleBarButtonForeground}"
 							TitleBarButtonForegroundDisabled="{DynamicResource TitleBarButtonForegroundDisabled}"
 							CaptionHeight="30"
-							CaptionHeightMaximized="40"
+							CaptionHeightMaximized="30"
 							Caption="Test" 
 							ContentExtend="False"
 							BorderBrush="{DynamicResource WindowBorderBrush}"
 							BorderBrushDisabled="{DynamicResource WindowBorderBrushDisabled}">
-	<Grid Margin="10">
+	<Grid Margin="0">
+		<DataGrid></DataGrid>
 		<TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Bottom" Foreground="White" FontWeight="Bold">D3BUG Blend Window</TextBlock>
 	</Grid>
 </d3BugDesign:BlendWindow>

@@ -184,7 +184,6 @@ namespace D3bugDesign
 			captionControl.Height = CaptionHeight;
 			TextBlock.SetForeground(captionControl, TitleBarForeground);
 			contentWindowBorder.Margin = ContentExtend ? new Thickness(0) : new Thickness(0, CaptionHeight, 0, 0);
-
 			Height = Height + 1;
 			Height = Height - 1;
 			StateChanged += StandardWindow_StateChanged;
@@ -195,10 +194,9 @@ namespace D3bugDesign
 
 		private void SetWindowState(WindowState state)
 		{
-			
 			if (state == WindowState.Maximized)
 			{
-				ResizeMode = ResizeMode.NoResize;
+			
 				base.WindowState = WindowState.Maximized;
 			}
 			else if (state == WindowState.Normal)
@@ -214,9 +212,10 @@ namespace D3bugDesign
 
 		protected void StandardWindow_StateChanged(object sender, EventArgs e)
 		{
-			ResizeMode = ResizeMode.CanResize;
+			
 			if (WindowState == WindowState.Normal)
 			{
+				ResizeMode = ResizeMode.CanResize;
 				restoreButton.Visibility = Visibility.Collapsed;
 				if (maximizeButtonState != WindowButtonState.None) maximizeButton.Visibility = Visibility.Visible;
 				captionControl.Height = CaptionHeight;
@@ -230,6 +229,7 @@ namespace D3bugDesign
 			else if (WindowState == WindowState.Maximized)
 			{
 				maximizeButton.Visibility = Visibility.Collapsed;
+				ResizeMode = ResizeMode.NoResize;
 				if (maximizeButtonState != WindowButtonState.None) restoreButton.Visibility = Visibility.Visible;
 				captionControl.Height = CaptionHeightMaximized;
 				var par = CaptionHeightMaximized * 0.7;

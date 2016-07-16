@@ -94,8 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NativeMethods.cs" />
-    <Compile Include="Others.cs" />
-    <Compile Include="ResizingAdorner.cs" />
+    <Compile Include="TypeConverterStringToUIElement.cs" />
     <Compile Include="BlendWindow.cs" />
     <Compile Include="WindowRestoreButton.cs" />
     <Compile Include="WindowMaximizeButton.cs" />
@@ -113,7 +112,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="VistaGlassApi.cs" />
     <Compile Include="WindowButton.xaml.cs">
       <DependentUpon>WindowButton.xaml</DependentUpon>
     </Compile>
