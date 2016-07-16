@@ -1,42 +1,52 @@
-﻿using System;
-using System.IO;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Markup;
 using System.Windows.Media;
+using System.Windows.Shapes;
 
 namespace D3bugDesign
 {
-    public class WindowCloseButton : WindowButton
-    {
-        Brush _backgroundDefaultValue;
+	public class WindowCloseButton : WindowButton
+	{
+		private BlendWindow window;
+		private Path p;
+		public WindowCloseButton(BlendWindow window1)
+		{
+			window = window1;
+			this.Width = 30;
 
-        public override Brush BackgroundDefaultValue
-        {
-            get { return _backgroundDefaultValue; }
-        }
+			p = new Path
+			{
+				Data = Geometry.Parse("M 7.070,5.657 L 4.949,3.535 L 7.070,1.414 L 5.656,0.000 L 3.535,2.121 L 1.414,0.001 L 0.000,1.415 L 2.121,3.535 L 0.000,5.656 L 1.414,7.071 L 3.535,4.950 L 5.656,7.071 ZM 7.070,5.657 L 4.949,3.535 L 7.070,1.414 L 5.656,0.000 L 3.535,2.121 L 1.414,0.001 L 0.000,1.415 L 2.121,3.535 L 0.000,5.656 L 1.414,7.071 L 3.535,4.950 L 5.656,7.071 Z"),
+				Fill = window.TitleBarButtonForeground,
+				Stroke = window.TitleBarButtonBorder,
+				StrokeThickness = 1,
+				RenderTransformOrigin = new Point(0.5, 0.5),
+				LayoutTransform = new ScaleTransform(1, 1),
+				Stretch = Stretch.Fill,
+				Width = 16,
+				Height = 13
+			};
+			Content = p;
+			ContentDisabled = p;
+			Foreground = window.TitleBarButtonForeground;
+			Background = window.TitleBarButtonBackground;
+			this.CornerRadius = new CornerRadius(0, 3, 3, 0);
+		}
 
-        public WindowCloseButton()
-        {
-            this.Width = 43;
-            
-            // open resource where in XAML are defined some required stuff such as icons and colors
-            Stream resourceStream = Application.GetResourceStream(new Uri("pack://application:,,,/D3bugDesign.BlendWindow;component/Themes/Generic.xaml")).Stream;
-            ResourceDictionary resourceDictionary = (ResourceDictionary)XamlReader.Load(resourceStream);
+		public void Enable()
+		{
+			Foreground = window.TitleBarButtonForeground;
+			Background = window.TitleBarButtonBackground;
+			p.Fill = window.TitleBarButtonForeground;
+			p.Stroke = window.TitleBarButtonBorder;
+		}
 
-            //
-            // Background
-            this.Background = (Brush)resourceDictionary["RedButtonBackground"];
-            _backgroundDefaultValue = (Brush)resourceDictionary["RedButtonBackground"];
-            
-            //
-            // Foreground (represents a backgroundcolor when Mouse is over)
-            this.Foreground = (Brush)resourceDictionary["RedButtonMouseOverBackground"];
-            
-            // set icon
-            this.Content = resourceDictionary["WindowButtonCloseIcon"];
-
-            // radius
-            this.CornerRadius = new CornerRadius(0, 0, 3, 0);
-        }
-    }
+		public void Disable()
+		{
+			Foreground = window.TitleBarButtonForegroundDisabled;
+			Background = window.TitleBarButtonBackgroundDisabled;
+			p.Fill = window.TitleBarButtonForegroundDisabled;
+			p.Stroke = window.TitleBarButtonForegroundDisabled;
+		}
+	}
 }

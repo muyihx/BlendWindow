@@ -93,12 +93,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Graphics.cs" />
     <Compile Include="NativeMethods.cs" />
     <Compile Include="Others.cs" />
     <Compile Include="ResizingAdorner.cs" />
-    <Compile Include="StandardWindow.cs" />
-    <Compile Include="WinApi.cs" />
+    <Compile Include="BlendWindow.cs" />
     <Compile Include="WindowRestoreButton.cs" />
     <Compile Include="WindowMaximizeButton.cs" />
     <Compile Include="WindowMinimizeButton.cs" />

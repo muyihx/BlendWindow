@@ -1,11 +1,21 @@
-﻿<d3BugDesign:StandardWindow x:Class="CustomWindowDemo.Window1"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:d3BugDesign="clr-namespace:D3bugDesign;assembly=D3bugDesign.BlendWindow"
-    Title="Window demo"
-    Height="300" Width="300" TitleBarBackground="Brown">
-    <Grid Margin="10">
-
-		<TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Bottom" FontWeight="Bold">Standard Window</TextBlock>
+﻿<d3BugDesign:BlendWindow x:Class="CustomWindowDemo.Window1" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d3BugDesign="clr-namespace:D3bugDesign;assembly=D3bugDesign.BlendWindow" Title="Window demo" Height="300" Width="300" 
+							Background="{DynamicResource WindowBackgroundBrush}" 
+							BackgroundDisabled="{DynamicResource TitleBarBackgroundDisabled}" 
+							TitleBarBackground="{DynamicResource TitleBarBackground}" 
+							TitleBarBackgroundDisabled="{DynamicResource TitleBarBackgroundDisabled}"
+							TitleBarForeground="{DynamicResource TitleBarForeColor}"
+							TitleBarForegroundDisabled="{DynamicResource TitleBarForegroundDisabled}"
+							TitleBarButtonBackground="{DynamicResource TitleBarButtonBackground}"
+							TitleBarButtonBackgroundDisabled="{DynamicResource TitleBarButtonBackgroundDisabled}"
+							TitleBarButtonForeground="{DynamicResource TitleBarButtonForeground}"
+							TitleBarButtonForegroundDisabled="{DynamicResource TitleBarButtonForegroundDisabled}"
+							CaptionHeight="30"
+							CaptionHeightMaximized="40"
+							Caption="Test" 
+							ContentExtend="False"
+							BorderBrush="{DynamicResource WindowBorderBrush}"
+							BorderBrushDisabled="{DynamicResource WindowBorderBrushDisabled}">
+	<Grid Margin="10">
+		<TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Bottom" Foreground="White" FontWeight="Bold">D3BUG Blend Window</TextBlock>
 	</Grid>
-</d3BugDesign:StandardWindow>
+</d3BugDesign:BlendWindow>

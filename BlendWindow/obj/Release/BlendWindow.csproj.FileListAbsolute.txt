@@ -8,3 +8,14 @@ C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindow\obj\Release\D3bugDesign.Pr
 C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindow\obj\Release\BlendWindow.csproj.GenerateResource.Cache
 C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindow\obj\Release\D3bugDesign.BlendWindow.dll
 C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindow\obj\Release\D3bugDesign.BlendWindow.pdb
+C:\Users\ic3y8\Desktop\BlendWindow\BlendWindow\bin\Release\D3bugDesign.BlendWindow.dll
+C:\Users\ic3y8\Desktop\BlendWindow\BlendWindow\bin\Release\D3bugDesign.BlendWindow.pdb
+C:\Users\ic3y8\Desktop\BlendWindow\BlendWindow\obj\Release\BlendWindow.csprojResolveAssemblyReference.cache
+C:\Users\ic3y8\Desktop\BlendWindow\BlendWindow\obj\Release\WindowButton.baml
+C:\Users\ic3y8\Desktop\BlendWindow\BlendWindow\obj\Release\WindowButton.g.cs
+C:\Users\ic3y8\Desktop\BlendWindow\BlendWindow\obj\Release\D3bugDesign.BlendWindow_MarkupCompile.cache
+C:\Users\ic3y8\Desktop\BlendWindow\BlendWindow\obj\Release\D3bugDesign.BlendWindow.g.resources
+C:\Users\ic3y8\Desktop\BlendWindow\BlendWindow\obj\Release\D3bugDesign.Properties.Resources.resources
+C:\Users\ic3y8\Desktop\BlendWindow\BlendWindow\obj\Release\BlendWindow.csproj.GenerateResource.Cache
+C:\Users\ic3y8\Desktop\BlendWindow\BlendWindow\obj\Release\D3bugDesign.BlendWindow.dll
+C:\Users\ic3y8\Desktop\BlendWindow\BlendWindow\obj\Release\D3bugDesign.BlendWindow.pdb

@@ -14,13 +14,13 @@
     <Button.Template>
         <ControlTemplate TargetType="Button">
             <Border x:Name="MainBorder" BorderBrush="{TemplateBinding BorderBrush}" 
-                    BorderThickness="1,0,1,1" CornerRadius="{Binding ElementName=myUcName, Path=CornerRadius}"
+                    BorderThickness="1,1,1,1" CornerRadius="{Binding ElementName=myUcName, Path=CornerRadius}"
                     Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" Background="{TemplateBinding Background}">
                 <Grid>
                     <Border x:Name="HighlightBorder" CornerRadius="{Binding ElementName=myUcName, Path=CornerRadius}">
                         <ContentControl x:Name="ContentPlaceHolder" Content="{Binding ElementName=myUcName, Path=ActiveContent}" Margin="0,-1,0,0" />
                     </Border>
-                    <Border x:Name="WhiteBorder" BorderBrush="#88FFFFFF" BorderThickness="1,0,1,1"
+                    <Border x:Name="WhiteBorder" BorderBrush="#88FFFFFF" BorderThickness="1,1,1,1"
                             CornerRadius="{Binding ElementName=myUcName, Path=CornerRadius}" />
                 </Grid>
             </Border>

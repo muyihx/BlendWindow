@@ -1,20 +1,48 @@
-﻿using System;
-using System.IO;
-using System.Windows;
-using System.Windows.Markup;
+﻿using System.Windows;
+using System.Windows.Media;
+using System.Windows.Shapes;
 
 namespace D3bugDesign
 {
-    public class WindowMaximizeButton : WindowButton
-    {
-        public WindowMaximizeButton()
-        {
-            // open resource where in XAML are defined icons and colors
-            Stream resourceStream = Application.GetResourceStream(new Uri("pack://application:,,,/D3bugDesign.BlendWindow;component/Themes/Generic.xaml")).Stream;
-            ResourceDictionary resourceDictionary = (ResourceDictionary)XamlReader.Load(resourceStream);
+	public class WindowMaximizeButton : WindowButton
+	{
+		private BlendWindow window;
+		private Path p;
+		public WindowMaximizeButton(BlendWindow window1)
+		{
+			window = window1;
+			p = new Path
+			{
+				Data = Geometry.Parse("M 1,3 L 11,3 L 11,11 L 1,11 Z M 0,0 L 12,0 L12,12 L 0,12 ZM 1,3 L 11,3 L 11,11 L 1,11 Z M 0,0 L 12,0 L12,12 L 0,12 Z"),
+				Fill = window.TitleBarButtonForeground,
+				Stroke = window.TitleBarButtonBorder,
+				StrokeThickness = 1,
+				RenderTransformOrigin = new Point(0.5, 0.5),
+				LayoutTransform = new ScaleTransform(1, 1),
+				Stretch = Stretch.Fill,
+				Width = 10,
+				Height = 10
+			};
+			Content = p;
+			ContentDisabled = p;
+			Foreground = window.TitleBarButtonForeground;
+			Background = window.TitleBarButtonBackground;
+		}
 
-            this.Content = resourceDictionary["WindowButtonMaximizeIcon"];
-            this.ContentDisabled = resourceDictionary["WindowButtonMaximizeIconDisabled"];
-        }
-    }
+		public void Enable()
+		{
+			Foreground = window.TitleBarButtonForeground;
+			Background = window.TitleBarButtonBackground;
+			p.Fill = window.TitleBarButtonForeground;
+			p.Stroke = window.TitleBarButtonBorder;
+		}
+
+		public void Disable()
+		{
+			Foreground = window.TitleBarButtonForegroundDisabled;
+			Background = window.TitleBarButtonBackgroundDisabled;
+			p.Fill = window.TitleBarButtonForegroundDisabled;
+			p.Stroke = window.TitleBarButtonForegroundDisabled;
+		}
+	}
 }

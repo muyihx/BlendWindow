@@ -2,3 +2,7 @@ C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowNugetPackage\bin\Release\Bl
 C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowNugetPackage\bin\Release\BlendWindowNugetPackage.pdb
 C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowNugetPackage\obj\Release\BlendWindowNugetPackage.dll
 C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowNugetPackage\obj\Release\BlendWindowNugetPackage.pdb
+C:\Users\ic3y8\Desktop\BlendWindow\BlendWindowNugetPackage\bin\Release\BlendWindowNugetPackage.dll
+C:\Users\ic3y8\Desktop\BlendWindow\BlendWindowNugetPackage\bin\Release\BlendWindowNugetPackage.pdb
+C:\Users\ic3y8\Desktop\BlendWindow\BlendWindowNugetPackage\obj\Release\BlendWindowNugetPackage.dll
+C:\Users\ic3y8\Desktop\BlendWindow\BlendWindowNugetPackage\obj\Release\BlendWindowNugetPackage.pdb

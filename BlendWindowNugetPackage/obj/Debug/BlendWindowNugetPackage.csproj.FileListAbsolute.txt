@@ -8,3 +8,8 @@ C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowNugetPackage\bin\Debug\Blen
 C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowNugetPackage\obj\Debug\BlendWindowNugetPackage.csprojResolveAssemblyReference.cache
 C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowNugetPackage\obj\Debug\BlendWindowNugetPackage.dll
 C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowNugetPackage\obj\Debug\BlendWindowNugetPackage.pdb
+C:\Users\ic3y8\Desktop\BlendWindow\BlendWindowNugetPackage\bin\Debug\BlendWindowNugetPackage.dll
+C:\Users\ic3y8\Desktop\BlendWindow\BlendWindowNugetPackage\bin\Debug\BlendWindowNugetPackage.pdb
+C:\Users\ic3y8\Desktop\BlendWindow\BlendWindowNugetPackage\obj\Debug\BlendWindowNugetPackage.csprojResolveAssemblyReference.cache
+C:\Users\ic3y8\Desktop\BlendWindow\BlendWindowNugetPackage\obj\Debug\BlendWindowNugetPackage.dll
+C:\Users\ic3y8\Desktop\BlendWindow\BlendWindowNugetPackage\obj\Debug\BlendWindowNugetPackage.pdb
