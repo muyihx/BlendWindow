@@ -19,3 +19,4 @@ C:\Users\ic3y8\Desktop\BlendWindow\BlendWindow\obj\Release\D3bugDesign.Propertie
 C:\Users\ic3y8\Desktop\BlendWindow\BlendWindow\obj\Release\BlendWindow.csproj.GenerateResource.Cache
 C:\Users\ic3y8\Desktop\BlendWindow\BlendWindow\obj\Release\D3bugDesign.BlendWindow.dll
 C:\Users\ic3y8\Desktop\BlendWindow\BlendWindow\obj\Release\D3bugDesign.BlendWindow.pdb
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindow\obj\Release\BlendWindow.csprojResolveAssemblyReference.cache

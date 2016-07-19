@@ -46,3 +46,6 @@ C:\Users\ic3y8\Desktop\BlendWindow\BlendWindowDemo\obj\Debug\CustomStyles.baml
 C:\Users\ic3y8\Desktop\BlendWindow\BlendWindowDemo\obj\Debug\CustomWindowDemo.g.resources
 C:\Users\ic3y8\Desktop\BlendWindow\BlendWindowDemo\obj\Debug\CustomWindowDemo.Properties.Resources.resources
 C:\Users\ic3y8\Desktop\BlendWindow\BlendWindowDemo\obj\Debug\BlendWindowDemo.csproj.GenerateResource.Cache
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowDemo\obj\Debug\App.baml
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowDemo\obj\Debug\CustomWindowDemo_MarkupCompile.lref
+C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowDemo\obj\Debug\CustomStyles.baml
