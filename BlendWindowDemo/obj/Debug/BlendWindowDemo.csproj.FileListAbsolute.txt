@@ -49,3 +49,6 @@ C:\Users\ic3y8\Desktop\BlendWindow\BlendWindowDemo\obj\Debug\BlendWindowDemo.csp
 C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowDemo\obj\Debug\App.baml
 C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowDemo\obj\Debug\CustomWindowDemo_MarkupCompile.lref
 C:\Users\JNelson\Source\Repos\BlendWindow\BlendWindowDemo\obj\Debug\CustomStyles.baml
+C:\Users\ic3y8\Source\Repos\BlendWindow\BlendWindowDemo\bin\Debug\CustomWindowDemo.exe.config
+C:\Users\ic3y8\Source\Repos\BlendWindow\BlendWindowDemo\obj\Debug\CustomWindowDemo.exe
+C:\Users\ic3y8\Source\Repos\BlendWindow\BlendWindowDemo\obj\Debug\CustomWindowDemo.pdb

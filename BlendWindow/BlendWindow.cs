@@ -7,11 +7,14 @@ using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Shell;
-
+[assembly: CLSCompliant(true)]
 namespace D3bugDesign
 {
+	[CLSCompliant(true)]
 	public class BlendWindow : Window
 	{
+		public enum WindowButtonState { Normal, Disabled, None }
+		public enum CloseActionOption { Hide, Close, Minimize }
 		private Border captionControl;
 		private WindowCloseButton closeButton;
 		private WindowButtonState closeButtonState;
@@ -26,8 +29,6 @@ namespace D3bugDesign
 		private HwndSource hwndSource;
 		private int captionHeight;
 		public bool ContentExtend { get; set; }
-
-
 
 		public WindowButtonState MinimizeButtonState
 		{
@@ -70,6 +71,7 @@ namespace D3bugDesign
 		{
 			if (Assembly.GetEntryAssembly() != null)
 			{
+				CloseActionOptionProperty = DependencyProperty.Register("CloseAction", typeof(CloseActionOption), typeof(BlendWindow), new UIPropertyMetadata(CloseActionOption.Close, CloseActionPropertyChanged));
 				CaptionHeightMaximizedProperty = DependencyProperty.Register("CaptionHeightMaximized", typeof(object), typeof(BlendWindow), new UIPropertyMetadata(25));
 				ContentProperty = DependencyProperty.Register("Content", typeof(object), typeof(BlendWindow), new UIPropertyMetadata(null, ContentChangedCallback));
 				BackgroundProperty = DependencyProperty.Register("Background", typeof(object), typeof(BlendWindow), new UIPropertyMetadata(Brushes.Transparent, BackgroundChangedCallback));
@@ -140,7 +142,7 @@ namespace D3bugDesign
 			closeButton.Margin = new Thickness(-1, 0, 0, 0);
 
 			// put buttons into StackPanel
-			var buttonsStackPanel = new StackPanel {Orientation = Orientation.Horizontal, Margin = new Thickness(5), VerticalAlignment = VerticalAlignment.Center};
+			var buttonsStackPanel = new StackPanel { Orientation = Orientation.Horizontal, Margin = new Thickness(5), VerticalAlignment = VerticalAlignment.Center };
 			buttonsStackPanel.Children.Add(minimizeButton);
 			buttonsStackPanel.Children.Add(restoreButton);
 			buttonsStackPanel.Children.Add(maximizeButton);
@@ -165,7 +167,7 @@ namespace D3bugDesign
 
 			//
 			// Window
-			contentWindowBackgroundBorder = new Border {Background = Background};
+			contentWindowBackgroundBorder = new Border { Background = Background };
 			var windowDockPanel = new DockPanel();
 			windowDockPanel.Children.Add(captionControl);
 			windowDockPanel.Children.Add(contentWindowBackgroundBorder);
@@ -196,7 +198,7 @@ namespace D3bugDesign
 		{
 			if (state == WindowState.Maximized)
 			{
-			
+
 				base.WindowState = WindowState.Maximized;
 			}
 			else if (state == WindowState.Normal)
@@ -212,7 +214,7 @@ namespace D3bugDesign
 
 		protected void StandardWindow_StateChanged(object sender, EventArgs e)
 		{
-			
+
 			if (WindowState == WindowState.Normal)
 			{
 				ResizeMode = ResizeMode.CanResize;
@@ -322,16 +324,48 @@ namespace D3bugDesign
 
 		protected virtual void OnButtonClose_Click(object sender, RoutedEventArgs e)
 		{
-			Close();
+			switch (CloseAction)
+			{
+				case CloseActionOption.Hide:
+					Hide();
+					break;
+				case CloseActionOption.Close:
+					Close();
+					break;
+				case CloseActionOption.Minimize:
+					WindowState = WindowState.Minimized;
+					break;
+			}
 		}
 
 		#endregion
 
 		#region Dependency Properties
 
+		#region Window
+
+		public static readonly DependencyProperty CloseActionOptionProperty;
+
+		private static void CloseActionPropertyChanged(DependencyObject property, DependencyPropertyChangedEventArgs args)
+		{
+			var window = (BlendWindow)property;
+			window.CloseAction = (CloseActionOption)args.NewValue;
+		}
+
+		public CloseActionOption CloseAction
+		{
+			get { return (CloseActionOption)GetValue(CloseActionOptionProperty); }
+			set
+			{
+				SetValue(CloseActionOptionProperty, value);
+			}
+		}
+
+		#endregion
+
 		#region Caption
 
-		[TypeConverter(typeof(TypeConverterStringToUIElement))]
+		[TypeConverter(typeof(TypeConverterStringToUiElement))]
 		public UIElement Caption
 		{
 			get { return captionControl.Child; }
@@ -341,10 +375,7 @@ namespace D3bugDesign
 		public int CaptionHeight
 		{
 			get { return captionHeight; }
-			set
-			{
-				captionHeight = value;
-			}
+			set { captionHeight = value; }
 		}
 
 		public static readonly DependencyProperty CaptionHeightMaximizedProperty;
@@ -352,10 +383,7 @@ namespace D3bugDesign
 		public int CaptionHeightMaximized
 		{
 			get { return (int)GetValue(CaptionHeightMaximizedProperty); }
-			set
-			{
-				SetValue(CaptionHeightMaximizedProperty, value);
-			}
+			set { SetValue(CaptionHeightMaximizedProperty, value); }
 		}
 
 		#endregion
@@ -392,10 +420,7 @@ namespace D3bugDesign
 		public Brush TitleBarBackgroundDisabled
 		{
 			get { return (Brush)GetValue(TitleBarBackgroundDisabledProperty); }
-			set
-			{
-				SetValue(TitleBarBackgroundDisabledProperty, value);
-			}
+			set { SetValue(TitleBarBackgroundDisabledProperty, value); }
 		}
 
 
@@ -429,10 +454,7 @@ namespace D3bugDesign
 		public Brush TitleBarForegroundDisabled
 		{
 			get { return (Brush)GetValue(TitleBarForegroundDisabledProperty); }
-			set
-			{
-				SetValue(TitleBarForegroundDisabledProperty, value);
-			}
+			set { SetValue(TitleBarForegroundDisabledProperty, value); }
 		}
 
 
@@ -447,10 +469,7 @@ namespace D3bugDesign
 		public Brush TitleBarButtonBackground
 		{
 			get { return (Brush)GetValue(TitleBarButtonBackgroundProperty); }
-			set
-			{
-				SetValue(TitleBarButtonBackgroundProperty, value);
-			}
+			set { SetValue(TitleBarButtonBackgroundProperty, value); }
 		}
 
 
@@ -465,12 +484,8 @@ namespace D3bugDesign
 		public Brush TitleBarButtonBackgroundDisabled
 		{
 			get { return (Brush)GetValue(TitleBarButtonBackgroundDisabledProperty); }
-			set
-			{
-				SetValue(TitleBarButtonBackgroundDisabledProperty, value);
-			}
+			set { SetValue(TitleBarButtonBackgroundDisabledProperty, value); }
 		}
-
 
 
 		public static readonly DependencyProperty TitleBarButtonForegroundProperty;
@@ -484,10 +499,7 @@ namespace D3bugDesign
 		public Brush TitleBarButtonForeground
 		{
 			get { return (Brush)GetValue(TitleBarButtonForegroundDisabledProperty); }
-			set
-			{
-				SetValue(TitleBarButtonForegroundDisabledProperty, value);
-			}
+			set { SetValue(TitleBarButtonForegroundDisabledProperty, value); }
 		}
 
 
@@ -497,16 +509,12 @@ namespace D3bugDesign
 		{
 			var window = (BlendWindow)property;
 			window.TitleBarButtonForegroundDisabled = (Brush)args.NewValue;
-
 		}
 
 		public Brush TitleBarButtonForegroundDisabled
 		{
 			get { return (Brush)GetValue(TitleBarButtonForegroundDisabledProperty); }
-			set
-			{
-				SetValue(TitleBarButtonForegroundDisabledProperty, value);
-			}
+			set { SetValue(TitleBarButtonForegroundDisabledProperty, value); }
 		}
 
 
@@ -521,10 +529,7 @@ namespace D3bugDesign
 		public Brush TitleBarButtonBorder
 		{
 			get { return (Brush)GetValue(TitleBarButtonBorderProperty); }
-			set
-			{
-				SetValue(TitleBarButtonBorderProperty, value);
-			}
+			set { SetValue(TitleBarButtonBorderProperty, value); }
 		}
 
 		public static readonly DependencyProperty TitleBarButtonBorderDisabledProperty;
@@ -538,10 +543,7 @@ namespace D3bugDesign
 		public Brush TitleBarButtonBorderDisabled
 		{
 			get { return (Brush)GetValue(TitleBarButtonBorderDisabledProperty); }
-			set
-			{
-				SetValue(TitleBarButtonBorderDisabledProperty, value);
-			}
+			set { SetValue(TitleBarButtonBorderDisabledProperty, value); }
 		}
 
 		#endregion
@@ -591,10 +593,7 @@ namespace D3bugDesign
 		public Brush BackgroundDisabled
 		{
 			get { return (Brush)GetValue(BackgroundDisabledProperty); }
-			set
-			{
-				SetValue(BackgroundDisabledProperty, value);
-			}
+			set { SetValue(BackgroundDisabledProperty, value); }
 		}
 
 		public new static readonly DependencyProperty BorderBrushProperty;
@@ -608,10 +607,7 @@ namespace D3bugDesign
 		public new Brush BorderBrush
 		{
 			get { return (Brush)GetValue(BorderBrushProperty); }
-			set
-			{
-				SetValue(BorderBrushProperty, value);
-			}
+			set { SetValue(BorderBrushProperty, value); }
 		}
 
 		public static readonly DependencyProperty BorderBrushDisabledProperty;
@@ -625,17 +621,10 @@ namespace D3bugDesign
 		public Brush BorderBrushDisabled
 		{
 			get { return (Brush)GetValue(BorderBrushDisabledProperty); }
-			set
-			{
-				SetValue(BorderBrushDisabledProperty, value);
-			}
+			set { SetValue(BorderBrushDisabledProperty, value); }
 		}
 
 		#endregion
-
-
-
-
 
 		#endregion
 	}
