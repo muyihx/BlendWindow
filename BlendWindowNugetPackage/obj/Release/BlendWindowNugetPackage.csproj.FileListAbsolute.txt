@@ -10,3 +10,7 @@ C:\Users\ic3y8\Source\Repos\BlendWindow\BlendWindowNugetPackage\bin\Release\Blen
 C:\Users\ic3y8\Source\Repos\BlendWindow\BlendWindowNugetPackage\bin\Release\BlendWindowNugetPackage.pdb
 C:\Users\ic3y8\Source\Repos\BlendWindow\BlendWindowNugetPackage\obj\Release\BlendWindowNugetPackage.dll
 C:\Users\ic3y8\Source\Repos\BlendWindow\BlendWindowNugetPackage\obj\Release\BlendWindowNugetPackage.pdb
+C:\Users\lordkoi\Source\BlendWindow\BlendWindowNugetPackage\bin\Release\BlendWindowNugetPackage.dll
+C:\Users\lordkoi\Source\BlendWindow\BlendWindowNugetPackage\bin\Release\BlendWindowNugetPackage.pdb
+C:\Users\lordkoi\Source\BlendWindow\BlendWindowNugetPackage\obj\Release\BlendWindowNugetPackage.dll
+C:\Users\lordkoi\Source\BlendWindow\BlendWindowNugetPackage\obj\Release\BlendWindowNugetPackage.pdb
