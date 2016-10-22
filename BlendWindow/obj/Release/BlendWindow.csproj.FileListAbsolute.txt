@@ -41,3 +41,13 @@ C:\Users\lordkoi\Source\BlendWindow\BlendWindow\obj\Release\D3bugDesign.Properti
 C:\Users\lordkoi\Source\BlendWindow\BlendWindow\obj\Release\BlendWindow.csproj.GenerateResource.Cache
 C:\Users\lordkoi\Source\BlendWindow\BlendWindow\obj\Release\D3bugDesign.BlendWindow.dll
 C:\Users\lordkoi\Source\BlendWindow\BlendWindow\obj\Release\D3bugDesign.BlendWindow.pdb
+C:\Users\lordkoi\Source\Github\BlendWindow\BlendWindow\bin\Release\D3bugDesign.BlendWindow.dll
+C:\Users\lordkoi\Source\Github\BlendWindow\BlendWindow\bin\Release\D3bugDesign.BlendWindow.pdb
+C:\Users\lordkoi\Source\Github\BlendWindow\BlendWindow\obj\Release\WindowButton.baml
+C:\Users\lordkoi\Source\Github\BlendWindow\BlendWindow\obj\Release\WindowButton.g.cs
+C:\Users\lordkoi\Source\Github\BlendWindow\BlendWindow\obj\Release\D3bugDesign.BlendWindow_MarkupCompile.cache
+C:\Users\lordkoi\Source\Github\BlendWindow\BlendWindow\obj\Release\D3bugDesign.BlendWindow.g.resources
+C:\Users\lordkoi\Source\Github\BlendWindow\BlendWindow\obj\Release\D3bugDesign.Properties.Resources.resources
+C:\Users\lordkoi\Source\Github\BlendWindow\BlendWindow\obj\Release\BlendWindow.csproj.GenerateResource.Cache
+C:\Users\lordkoi\Source\Github\BlendWindow\BlendWindow\obj\Release\D3bugDesign.BlendWindow.dll
+C:\Users\lordkoi\Source\Github\BlendWindow\BlendWindow\obj\Release\D3bugDesign.BlendWindow.pdb

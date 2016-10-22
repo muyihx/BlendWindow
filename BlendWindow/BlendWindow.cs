@@ -72,6 +72,7 @@ namespace D3bugDesign
 			if (Assembly.GetEntryAssembly() != null)
 			{
 				CloseActionOptionProperty = DependencyProperty.Register("CloseAction", typeof(CloseActionOption), typeof(BlendWindow), new UIPropertyMetadata(CloseActionOption.Close, CloseActionPropertyChanged));
+				HideTitlebarButtonsProperty = DependencyProperty.Register("HideTitlebarButtons", typeof(bool), typeof(BlendWindow), new UIPropertyMetadata(false, HideTitlebarButtonsPropertyChanged));
 				CaptionHeightMaximizedProperty = DependencyProperty.Register("CaptionHeightMaximized", typeof(object), typeof(BlendWindow), new UIPropertyMetadata(25));
 				ContentProperty = DependencyProperty.Register("Content", typeof(object), typeof(BlendWindow), new UIPropertyMetadata(null, ContentChangedCallback));
 				BackgroundProperty = DependencyProperty.Register("Background", typeof(object), typeof(BlendWindow), new UIPropertyMetadata(Brushes.Transparent, BackgroundChangedCallback));
@@ -219,7 +220,10 @@ namespace D3bugDesign
 			{
 				ResizeMode = ResizeMode.CanResize;
 				restoreButton.Visibility = Visibility.Collapsed;
-				if (maximizeButtonState != WindowButtonState.None) maximizeButton.Visibility = Visibility.Visible;
+				if (maximizeButtonState != WindowButtonState.None)
+				{
+					maximizeButton.Visibility = HideTitlebarButtons ? Visibility.Hidden : Visibility.Visible;
+				}
 				captionControl.Height = CaptionHeight;
 				var par = CaptionHeight * 0.7;
 				minimizeButton.Height = par;
@@ -232,7 +236,10 @@ namespace D3bugDesign
 			{
 				maximizeButton.Visibility = Visibility.Collapsed;
 				ResizeMode = ResizeMode.NoResize;
-				if (maximizeButtonState != WindowButtonState.None) restoreButton.Visibility = Visibility.Visible;
+				if (maximizeButtonState != WindowButtonState.None)
+				{
+					restoreButton.Visibility = HideTitlebarButtons ? Visibility.Hidden : Visibility.Visible;
+				}
 				captionControl.Height = CaptionHeightMaximized;
 				var par = CaptionHeightMaximized * 0.7;
 				minimizeButton.Height = par;
@@ -358,6 +365,27 @@ namespace D3bugDesign
 			set
 			{
 				SetValue(CloseActionOptionProperty, value);
+			}
+		}
+
+		public static readonly DependencyProperty HideTitlebarButtonsProperty;
+
+		private static void HideTitlebarButtonsPropertyChanged(DependencyObject property, DependencyPropertyChangedEventArgs args)
+		{
+			var window = (BlendWindow)property;
+			window.HideTitlebarButtons = (bool)args.NewValue;
+			window.closeButton.Visibility = window.HideTitlebarButtons ? Visibility.Hidden : Visibility.Visible;
+			window.minimizeButton.Visibility = window.HideTitlebarButtons ? Visibility.Hidden : Visibility.Visible;
+			window.maximizeButton.Visibility = window.HideTitlebarButtons ? Visibility.Hidden : Visibility.Visible;
+			window.restoreButton.Visibility = window.HideTitlebarButtons ? Visibility.Hidden : Visibility.Visible;
+		}
+
+		public bool HideTitlebarButtons
+		{
+			get { return (bool)GetValue(HideTitlebarButtonsProperty); }
+			set
+			{
+				SetValue(HideTitlebarButtonsProperty, value);
 			}
 		}
 

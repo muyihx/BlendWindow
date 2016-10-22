@@ -14,3 +14,8 @@ C:\Users\lordkoi\Source\BlendWindow\BlendWindowNugetPackage\bin\Release\BlendWin
 C:\Users\lordkoi\Source\BlendWindow\BlendWindowNugetPackage\bin\Release\BlendWindowNugetPackage.pdb
 C:\Users\lordkoi\Source\BlendWindow\BlendWindowNugetPackage\obj\Release\BlendWindowNugetPackage.dll
 C:\Users\lordkoi\Source\BlendWindow\BlendWindowNugetPackage\obj\Release\BlendWindowNugetPackage.pdb
+C:\Users\lordkoi\Source\Github\BlendWindow\BlendWindowNugetPackage\bin\Release\BlendWindowNugetPackage.dll
+C:\Users\lordkoi\Source\Github\BlendWindow\BlendWindowNugetPackage\bin\Release\BlendWindowNugetPackage.pdb
+C:\Users\lordkoi\Source\Github\BlendWindow\BlendWindowNugetPackage\obj\Release\BlendWindowNugetPackage.csprojResolveAssemblyReference.cache
+C:\Users\lordkoi\Source\Github\BlendWindow\BlendWindowNugetPackage\obj\Release\BlendWindowNugetPackage.dll
+C:\Users\lordkoi\Source\Github\BlendWindow\BlendWindowNugetPackage\obj\Release\BlendWindowNugetPackage.pdb
