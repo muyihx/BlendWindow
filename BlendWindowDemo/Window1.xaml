@@ -16,7 +16,9 @@
 							BorderBrush="{DynamicResource WindowBorderBrush}"
 							BorderBrushDisabled="{DynamicResource WindowBorderBrushDisabled}"
 							CloseAction="Close"
-							HideTitlebarButtons="False">
+							HideTitlebarButtons="False"
+							CanMaximizeByDoubleClick="True"
+							CanMoveWindow="true">
 	<Grid Margin="0">
 		<DataGrid></DataGrid>
 		<TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Bottom" Foreground="White" FontWeight="Bold">D3BUG Blend Window</TextBlock>

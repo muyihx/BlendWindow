@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
@@ -69,10 +70,13 @@ namespace D3bugDesign
 
 		static BlendWindow()
 		{
+
 			if (Assembly.GetEntryAssembly() != null)
 			{
 				CloseActionOptionProperty = DependencyProperty.Register("CloseAction", typeof(CloseActionOption), typeof(BlendWindow), new UIPropertyMetadata(CloseActionOption.Close, CloseActionPropertyChanged));
 				HideTitlebarButtonsProperty = DependencyProperty.Register("HideTitlebarButtons", typeof(bool), typeof(BlendWindow), new UIPropertyMetadata(false, HideTitlebarButtonsPropertyChanged));
+				CanMaximizeByDoubleClickProperty = DependencyProperty.Register("CanMaximizeByDoubleClick", typeof(bool), typeof(BlendWindow), new UIPropertyMetadata(true, CanMaximizeByDoubleClickPropertyChanged));
+				CanMoveWindowProperty = DependencyProperty.Register("CanMoveWindow", typeof(bool), typeof(BlendWindow), new UIPropertyMetadata(true, CanMoveWindowPropertyChanged));
 				CaptionHeightMaximizedProperty = DependencyProperty.Register("CaptionHeightMaximized", typeof(object), typeof(BlendWindow), new UIPropertyMetadata(25));
 				ContentProperty = DependencyProperty.Register("Content", typeof(object), typeof(BlendWindow), new UIPropertyMetadata(null, ContentChangedCallback));
 				BackgroundProperty = DependencyProperty.Register("Background", typeof(object), typeof(BlendWindow), new UIPropertyMetadata(Brushes.Transparent, BackgroundChangedCallback));
@@ -113,11 +117,34 @@ namespace D3bugDesign
 			fromHwnd?.AddHook(WindowProc);
 		}
 
-		public static IntPtr WindowProc(IntPtr hwnd, int msg, IntPtr wparam, IntPtr lparam, ref bool handled)
+		public ushort LowWord(uint val)
+		{
+			return (ushort)val;
+		}
+
+		public ushort HighWord(uint val)
+		{
+			return (ushort)(val >> 16);
+		}
+
+		public uint BuildWParam(ushort low, ushort high)
+		{
+			return ((uint)high << 16) | (uint)low;
+		}
+
+		public IntPtr WindowProc(IntPtr hwnd, int msg, IntPtr wparam, IntPtr lparam, ref bool handled)
 		{
 			var a = (WindowsMessage)msg;
 			switch (a)
 			{
+				case WindowsMessage.WM_SYSCOMMAND:
+					int command = (int)wparam & 0xfff0;
+					if ((WindowsMessage)command == WindowsMessage.SC_MOVE)
+						if(!CanMoveWindow)handled = true;
+					break;
+				case WindowsMessage.WM_NCLBUTTONDBLCLK:
+					if (!CanMaximizeByDoubleClick) handled = true;
+					break;
 				case WindowsMessage.WM_GETMINMAXINFO:
 					NativeMethods.WmGetMinMaxInfo(hwnd, lparam);
 					break;
@@ -285,10 +312,14 @@ namespace D3bugDesign
 			{
 				if (Environment.TickCount - lastMouseCaptionClick < 400)
 				{
-					if (WindowState == WindowState.Maximized)
-						WindowState = WindowState.Normal;
-					else if (WindowState == WindowState.Normal)
-						WindowState = WindowState.Maximized;
+					if (CanMaximizeByDoubleClick)
+					{
+						if (WindowState == WindowState.Maximized)
+							WindowState = WindowState.Normal;
+						else if (WindowState == WindowState.Normal)
+							WindowState = WindowState.Maximized;
+					}
+
 					lastMouseCaptionClick = 0;
 				}
 				lastMouseCaptionClick = Environment.TickCount;
@@ -386,6 +417,40 @@ namespace D3bugDesign
 			set
 			{
 				SetValue(HideTitlebarButtonsProperty, value);
+			}
+		}
+
+		public static readonly DependencyProperty CanMaximizeByDoubleClickProperty;
+
+		private static void CanMaximizeByDoubleClickPropertyChanged(DependencyObject property, DependencyPropertyChangedEventArgs args)
+		{
+			var window = (BlendWindow)property;
+			window.CanMaximizeByDoubleClick = (bool)args.NewValue;
+		}
+
+		public bool CanMaximizeByDoubleClick
+		{
+			get { return (bool)GetValue(CanMaximizeByDoubleClickProperty); }
+			set
+			{
+				SetValue(CanMaximizeByDoubleClickProperty, value);
+			}
+		}
+
+		public static readonly DependencyProperty CanMoveWindowProperty;
+
+		private static void CanMoveWindowPropertyChanged(DependencyObject property, DependencyPropertyChangedEventArgs args)
+		{
+			var window = (BlendWindow)property;
+			window.CanMoveWindow = (bool)args.NewValue;
+		}
+
+		public bool CanMoveWindow
+		{
+			get { return (bool)GetValue(CanMoveWindowProperty); }
+			set
+			{
+				SetValue(CanMoveWindowProperty, value);
 			}
 		}
 
